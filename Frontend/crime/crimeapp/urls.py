@@ -12,5 +12,5 @@ urlpatterns = [
     path('view',views.view,name='view'),
     path('moduless',views.moduless,name='moduless'),
     path('prediction',views.prediction,name='prediction'),
-    # path('result',views.result,name='result'),
+    #path('result',views.result,name='result'),
 ]

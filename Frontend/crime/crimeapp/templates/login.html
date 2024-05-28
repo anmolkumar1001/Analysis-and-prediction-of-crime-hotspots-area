@@ -1,67 +1,96 @@
-{% extends 'base.html' %}
-{% block code %}
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'base.html' %} {% block code %}
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
+  .button {
+    border-radius: 20px;
+    background-color: #f4511e;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px 30px;
+    width: 100%;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .card {
+    background-color: #d9ead3;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  table {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  td {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  /* Adjust this for smaller screens */
+  @media (max-width: 768px) {
     .button {
-      border-radius: 20px;
-      background-color: #f4511e;
-      border: none;
-      color: #FFFFFF;
-      text-align: center;
-      font-size: 28px;
-      padding: 20px;
-      width: 600px;
-      transition: all 0.5s;
-      cursor: pointer;
-      margin: 5px;
+      width: 100%;
+      padding: 15px;
     }
-    
-    .button span {
-      cursor: pointer;
-      display: inline-block;
-      position: relative;
-      transition: 0.5s;
-    }
-    
-    .button span:after {
-      content: '\00bb';
-      position: absolute;
-      opacity: 0;
-      top: 0;
-      right: -20px;
-      transition: 0.5s;
-    }
-    
-    .button:hover span {
-      padding-right: 25px;
-    }
-    
-    .button:hover span:after {
-      opacity: 1;
-      right: 0;
-    }
+  }
 </style>
 
- <!-- ======= Hero Section ======= -->
- <section id="hero">
-    <div class="hero-container">
-      {{msg}}
-        <div class="card" style="background-color: #D9EAD3;  border-radius:30px;" >
-            <form action="" method="post">
-                {% csrf_token %}
-               <center >
-                
-                <table style="height:100px">
-                  
-              {{ login_form }}
-            </table>
-              </center>
-              <br>
-              <button type="submit" class="button"><span>Submit</span></button>
-      
-            </div>
-          </form>
+<section id="hero">
+  <div class="hero-container">
+    {{ msg }}
+    <div class="card">
+      <form action="" method="post">
+        {% csrf_token %}
+        <table>
+          {{ login_form.as_table }}
+        </table>
+        <button type="submit" class="button"><span>Submit</span></button>
+      </form>
     </div>
-  </section><!-- End Hero -->
+  </div>
+</section>
 {% endblock %}
-

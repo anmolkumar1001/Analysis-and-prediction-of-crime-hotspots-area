@@ -7,11 +7,11 @@
         <form action="" enctype="multipart/form-data" method="post">
             <center><b><h1 style="color:white">{{msg}}</h1></b></center>
             {% csrf_token %}
-          <center><label for="algo"><h2 style="color:white;">:algorithms:</h2></label>
+          <center><label for="algo"><h2 style="color:white;">Algorithms:</h2></label>
                 <br>
         
                 <select name="algo" id="algo"  style="width: 500px; height: 50px;">
-                  <option value="">chose Module</option>
+                  <option value="">Choose Module</option>
                   <option value="2">DecisionTree</option>
                   <option value="1">RandomForest</option>
                   <option value="3">GradientBoosting</option>                                   
@@ -29,4 +29,3 @@
     </div>
   </section><!-- End Hero -->
 {% endblock %}
-
