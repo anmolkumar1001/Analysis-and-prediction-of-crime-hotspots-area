@@ -32,4 +32,4 @@ Based on the analysis and prediction of crime hotspots using the stacked general
 
 4. The results of this project can be useful in developing crime prevention strategies and allocating law enforcement resources more effectively.
 
-Our project achieves _83%_ accuracy in predicting crime hotspots.
+Our project achieves _85-90%_ accuracy in predicting crime hotspots.
