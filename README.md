@@ -20,11 +20,6 @@ _\_\_\_\_\*\*OBJECTIVES_\_\_\_\_\*\*
 
 We have taken 1000 enteries of Bangalore crime data.
 
-_\_\_\_\_\*\*RESULTS AND DISCUSSIONS_\_\_\_\_\*\*
-
-This section presents the outcome of the proposed project and interprets the results and puts them in a proper context. The results section typically includes a summary of the data collected, any statistical analyses performed, and the conclusions drawn from the analysis.
-
-
 _\_\_\_\_\*\*CONCLUSION_\_\_\_\_\*\*
 
 Based on the analysis and prediction of crime hotspots using the stacked generalization approach with decision tree, random forest, and gradient boosting machine learning algorithms, we can conclude that:
